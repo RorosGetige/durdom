@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Новая игра от MishaSoft</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-tr from-gray-900 to-black text-white font-sans">
+
+  <!-- Hero Section -->
+  <section id="main" class="min-h-screen flex flex-col justify-between">
+    <div class="p-8 text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-pink-500 drop-shadow-lg">Endless Shadows</h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-6">Погрузись в мрачный пиксельный мир, где каждый шаг может стать последним...</p>
+      <button onclick="showMessage()" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all shadow-md">Скачать демо</button>
+    </div>
+
+    <!-- Features -->
+    <div class="bg-gray-800 bg-opacity-50 p-10 rounded-xl mx-6 md:mx-20 my-10 text-center shadow-xl">
+      <h2 class="text-3xl font-bold mb-4 text-white">Особенности игры</h2>
+      <ul class="space-y-2 text-gray-300">
+        <li>🔪 Пиксельная жестокость и адреналин</li>
+        <li>🎮 Контролируй свои страхи — или они контролируют тебя</li>
+        <li>🧩 Головоломки, которые доведут до истерики</li>
+      </ul>
+    </div>
+
+    <!-- Screenshots -->
+    <div class="flex flex-wrap justify-center gap-6 p-6">
+      <img src="https://via.placeholder.com/300x200/111111/ffffff?text=Скрин1" class="rounded-lg shadow-md" />
+      <img src="https://via.placeholder.com/300x200/222222/ffffff?text=Скрин2" class="rounded-lg shadow-md" />
+      <img src="https://via.placeholder.com/300x200/333333/ffffff?text=Скрин3" class="rounded-lg shadow-md" />
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center my-12">
+      <h3 class="text-2xl font-bold mb-4">Готов прыгнуть в бездну?</h3>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <button onclick="showMessage()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg transition">Купить на Steam</button>
+        <button onclick="showMessage()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full shadow-lg transition">Играть онлайн</button>
+        <button onclick="showMessage()" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full shadow-lg transition">Поддержать проект</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message Section -->
+  <section id="message" class="hidden min-h-screen flex items-center justify-center fade-in">
+    <h1 class="text-6xl md:text-8xl font-black text-red-500 text-center drop-shadow-xl px-6">
+      Миша, не страдай хуйней, ты ж знаешь с кем общаешься)
+    </h1>
+  </section>
+
+  <script>
+    function showMessage() {
+      document.getElementById('main').classList.add('hidden');
+      document.getElementById('message').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
